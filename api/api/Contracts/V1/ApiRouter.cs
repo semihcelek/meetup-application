@@ -14,5 +14,13 @@
             public const string Create = Base + "/post";
             public const string Delete = Base + "/post/delete/{id}";
         }
+
+        public static class Meetup
+        {
+            public const string Get = Base + "/post/{id}";
+            public const string GetAll = Base + "/post/all";
+            public const string Create = Base + "/post";
+            public const string Delete = Base + "/post/delete/{id}";
+        }
     } 
 }
