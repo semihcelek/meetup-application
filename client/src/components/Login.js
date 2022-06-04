@@ -14,7 +14,7 @@ const Login = () => {
     setSubmitting(false);
   };
   return (
-    <div>
+    <div className="container p-5 mt-5 m-5">
       <h3>Login</h3>
       <Formik
         initialValues={{ email: "", password: "" }}

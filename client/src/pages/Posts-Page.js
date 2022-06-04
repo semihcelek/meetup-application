@@ -7,13 +7,13 @@ const PostsPage = () => {
   const { data, isloading, error } = useFetch("/post/all");
 
   return (
-    <div>
+    <div className="container-xl p-5">
       <NewPost />
       {isloading ? (
         <div>load...</div>
       ) : (
         data.map((story) => (
-          <div key={story.id}>
+          <div className="row" key={story.id}>
             <Post
               title={story.title}
               content={story.content}

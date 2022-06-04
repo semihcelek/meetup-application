@@ -15,28 +15,16 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="container mt-5 m-5 p-5 ">
       <h3>Register</h3>
       <Formik
         initialValues={{
-          username: "",
-          firsName: "",
-          lastName: "",
           email: "",
           password: "",
         }}
         onSubmit={handleSubmit}
       >
         <Form>
-          <label>Username:</label>
-          <Field name="username" type="text" />
-
-          <label>First Name:</label>
-          <Field name="firstName" type="text" />
-
-          <label>Last Name (optional):</label>
-          <Field name="lastName" type="text" />
-
           <label>email:</label>
           <Field name="email" type="email" />
 

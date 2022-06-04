@@ -3,10 +3,10 @@ import propTypes from "prop-types";
 
 const Post = ({ title, content, author }) => {
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{content}</p>
-      <h6>{author}</h6>
+    <div className="card col align-self-start">
+      <h3 className="card-title" >{title}</h3>
+      <p  className="card-text" > {content}</p>
+      <h6 className="card-subtitle mb-2 text-muted">{author}</h6>
     </div>
   );
 };

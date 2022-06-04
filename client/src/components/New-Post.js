@@ -13,7 +13,7 @@ const NewPost = () => {
   };
 
   return (
-    <div>
+    <div className="container-m" >
       <Formik
         initialValues={{ title: "", content: "" }}
         onSubmit={handleSubmit}

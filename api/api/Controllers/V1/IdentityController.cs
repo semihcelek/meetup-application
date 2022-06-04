@@ -50,7 +50,8 @@ namespace SemihCelek.Meetup.api.Controllers.V1
 
             return Ok(new LoginResponse.Success
             {
-                Token = authResponse.Token
+                Token = authResponse.Token,
+                Email = request.Email
             });
         }
     }

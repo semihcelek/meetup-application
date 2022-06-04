@@ -14,30 +14,34 @@ const Router = () => {
     <div>
       <BrowserRouter>
         <div>
-          <h3>olur gibi</h3>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/posts">Posts</Link>
-            </li>
+          <div className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div className="container-fluid">
+              <h3 className="display-6 primary">Meetup Application</h3>
+              <ul className="navbar-nav">
+                <li className="nav-item m-4">
+                  <Link to="/" className="navlink display-6" >Home</Link>
+                </li>
+                <li className="nav-item  m-4">
+                  <Link to="/posts" className="navlink display-6">Posts</Link>
+                </li>
 
-            {user.token ? (
-              <li>
-                <Link to="/home">{user.username}</Link>
-              </li>
-            ) : (
-              <div>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-                <li>
-                  <Link to="/register">Register</Link>
-                </li>
-              </div>
-            )}
-          </ul>
+                {user.token ? (
+                  <li className="nav-item  m-4">
+                    <Link to="/home" className="navlink display-6">{user.email}</Link>
+                  </li>
+                ) : (<>
+                    <li className="nav-item  m-4">
+                      <Link to="/login" className="navlink display-6">Login</Link>
+                    </li>
+                    <li className="nav-item  m-4">
+                      <Link to="/register" className="navlink display-6">Register</Link>
+                    </li>
+                    </>
+                )}
+              </ul>
+            </div>
+
+          </div>
 
           <Switch>
             <Route path="/posts/:id">
