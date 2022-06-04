@@ -76,7 +76,7 @@ namespace SemihCelek.Meetup.api.Services
 
         public async Task<AuthenticationResult> LoginAsync(string email, string password)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            IdentityUser user = await _userManager.FindByEmailAsync(email);
 
             if (user is null)
             {
@@ -86,7 +86,7 @@ namespace SemihCelek.Meetup.api.Services
                 };
             }
 
-            var userHasValidPassword = await _userManager.CheckPasswordAsync(user, password);
+            bool userHasValidPassword = await _userManager.CheckPasswordAsync(user, password);
 
             if (!userHasValidPassword)
             {
@@ -112,7 +112,7 @@ namespace SemihCelek.Meetup.api.Services
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
                     SecurityAlgorithms.HmacSha256Signature)
             };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
+            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
 
             return new AuthenticationResult
             {

@@ -13,6 +13,7 @@ const Login = () => {
     saveLocalUser(userObj);
     setSubmitting(false);
   };
+  
   return (
     <div className="container p-5 mt-5 m-5">
       <h3>Login</h3>
@@ -21,12 +22,12 @@ const Login = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <label>email:</label>
-          <Field name="email" type="email" />
+          <label className="form-label">email:</label>
+          <Field className="form-control" name="email" type="email" />
 
-          <label>password</label>
-          <Field name="password" type="password" />
-          <button type="submit">login</button>
+          <label className="form-label">password</label>
+          <Field className="form-control" name="password" type="password" />
+          <button className="mt-4 btn btn-primary" type="submit">login</button>
         </Form>
       </Formik>
     </div>

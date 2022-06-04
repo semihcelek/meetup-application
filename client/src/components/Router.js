@@ -14,33 +14,32 @@ const Router = () => {
     <div>
       <BrowserRouter>
         <div>
-          <div className="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+          <div className="navbar navbar-expand fixed-top navbar-light bg-light">
             <div className="container-fluid">
-              <h3 className="display-6 primary">Meetup Application</h3>
+              <h3 className="display-8 primary">Meetup Application</h3>
               <ul className="navbar-nav">
-                <li className="nav-item m-4">
+                <li className="nav-item m-2">
                   <Link to="/" className="navlink display-6" >Home</Link>
                 </li>
-                <li className="nav-item  m-4">
+                <li className="nav-item  m-2">
                   <Link to="/posts" className="navlink display-6">Posts</Link>
                 </li>
 
                 {user.token ? (
-                  <li className="nav-item  m-4">
+                  <li className="nav-item  m-2">
                     <Link to="/home" className="navlink display-6">{user.email}</Link>
                   </li>
                 ) : (<>
-                    <li className="nav-item  m-4">
+                    <li className="nav-item  m-2">
                       <Link to="/login" className="navlink display-6">Login</Link>
                     </li>
-                    <li className="nav-item  m-4">
+                    <li className="nav-item  m-2">
                       <Link to="/register" className="navlink display-6">Register</Link>
                     </li>
                     </>
                 )}
               </ul>
             </div>
-
           </div>
 
           <Switch>

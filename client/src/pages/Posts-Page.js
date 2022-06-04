@@ -15,6 +15,7 @@ const PostsPage = () => {
         data.map((story) => (
           <div className="row" key={story.id}>
             <Post
+              id={story.id}
               title={story.title}
               content={story.content}
               author={story.author}

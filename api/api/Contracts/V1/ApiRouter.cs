@@ -5,7 +5,7 @@
         private const string Root = "api";
         private const string Version = "/v1";
 
-        public const string Base = Root + Version;
+        private const string Base = Root + Version;
 
         public static class Post
         {

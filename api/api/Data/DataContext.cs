@@ -13,10 +13,5 @@ namespace SemihCelek.Meetup.api.Data
 
         public DbSet<PostModel> PostDataContext { get; set; }
         public DbSet<MeetupModel> MeetupDataContext { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-        }
     }
 }

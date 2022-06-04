@@ -21,6 +21,7 @@ const User = ({
     </div>
   );
 };
+
 User.propTypes = {
   username: propTypes.string.isRequired,
   firstName: propTypes.string.isRequired,

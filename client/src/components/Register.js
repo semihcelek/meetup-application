@@ -25,12 +25,12 @@ const Register = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <label>email:</label>
-          <Field name="email" type="email" />
+          <label className="form-label" >email:</label>
+          <Field className="form-control" name="email" type="email" />
 
-          <label>password</label>
-          <Field name="password" type="password" />
-          <button type="submit">register</button>
+          <label className="form-label">password</label>
+          <Field className="form-control" name="password" type="password" />
+          <button className="mt-4 btn btn-primary" type="submit">register</button>
         </Form>
       </Formik>
     </div>

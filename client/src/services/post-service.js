@@ -8,23 +8,32 @@ export const createPost = async (values, userObj) => {
   const config = {
     headers: { Authorization: userToken },
   };
+
   const response = await axios.post(
     `${process.env.REACT_APP_API_URL}/post`,
     payload,
     config
   );
+
   return response.data;
 };
+
+export const deletePost = async (id) => {
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/post/delete/${id}`)
+    return response.data;
+}
+
 export const userPosts = async (userObj) => {
   const userToken = setToken(userObj);
   const userId = userObj.id;
   const config = {
     headers: { Authorization: userToken },
   };
+
   const response = await axios.get(
-    `${process.env.REACT_APP_API_URL}/user/${userId}/posts/json`,
+    `${process.env.REACT_APP_API_URL}/user/${userId}/posts`,
     config
   );
-  // console.log(response.data);
+
   return response.data;
 };
