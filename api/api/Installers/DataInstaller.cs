@@ -14,9 +14,9 @@ namespace SemihCelek.Meetup.api.Installers
             {
                 options.UseNpgsql(configuration.GetConnectionString("PostgresConnection"));
             });
-            
+
             services.AddDatabaseDeveloperPageExceptionFilter();
-            
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<DataContext>();
         }

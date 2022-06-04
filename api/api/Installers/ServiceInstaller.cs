@@ -9,7 +9,7 @@ namespace SemihCelek.Meetup.api.Installers
         public void InstallServices(IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IPostService, PostService>();
-
+            services.AddScoped<IMeetupService, MeetupService>();
         }
     }
 }

@@ -7,6 +7,8 @@ namespace SemihCelek.Meetup.api.Services
     public interface IMeetupService
     {
         Task<List<MeetupModel>> GetAllMeetupAsync();
-        Task<object> GetMeetupAsync(int id);
+        Task<MeetupModel> GetMeetupAsync(int id);
+        Task<bool> CreateMeetupAsync(MeetupModel meetupModel);
+        Task<bool> DeleteMeetupAsync(int id);
     }
 }
