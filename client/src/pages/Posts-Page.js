@@ -4,7 +4,7 @@ import Post from "../components/Post";
 import { useFetch } from "../services/useFetch";
 
 const PostsPage = () => {
-  const { data, isloading, error } = useFetch("/post/all/json");
+  const { data, isloading, error } = useFetch("/post/all");
 
   return (
     <div>

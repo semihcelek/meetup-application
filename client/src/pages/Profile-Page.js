@@ -5,7 +5,7 @@ import { useFetch } from "../services/useFetch";
 
 const ProfilePage = () => {
   const { username } = useParams();
-  const { data, isloading, error } = useFetch(`/user/${username}/json`);
+  const { data, isloading, error } = useFetch(`/user/${username}`);
   return (
     <div>
       <h3>{username}</h3>

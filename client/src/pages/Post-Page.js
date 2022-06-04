@@ -5,7 +5,7 @@ import Post from "../components/Post";
 import { useFetch } from "../services/useFetch";
 const PostPage = () => {
   const { id } = useParams();
-  const { data, isloading, error } = useFetch(`/post/${id}/json`);
+  const { data, isloading, error } = useFetch(`/post/${id}`);
 
   return (
     <div>

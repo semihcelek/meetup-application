@@ -33,6 +33,8 @@ namespace SemihCelek.Meetup.api
                 app.UseHsts();
             }
 
+            app.UseCors(b => b.AllowAnyOrigin());
+
             SwaggerOptions swaggerOptions = new SwaggerOptions();
             Configuration.GetSection(nameof(Swashbuckle.AspNetCore.Swagger.SwaggerOptions)).Bind(swaggerOptions);
 

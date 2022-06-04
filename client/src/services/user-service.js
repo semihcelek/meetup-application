@@ -4,9 +4,10 @@ export const setToken = (userObj) => {
   const token = `Bearer ${userObj.token}`;
   return token;
 };
+
 export const loginUser = async (values) => {
   const response = await axios.post(
-    `${process.env.REACT_APP_API_URL}/login`,
+    `${process.env.REACT_APP_API_URL}/user/login`,
     values
   );
   console.log(response.data);
@@ -16,13 +17,15 @@ export const loginUser = async (values) => {
     return null;
   }
 };
+
 export const registerUser = async (values) => {
   const response = await axios.post(
-    `${process.env.REACT_APP_API_URL}/register`,
+    `${process.env.REACT_APP_API_URL}/user/register`,
     values
   );
   return response.data;
 };
+
 export const getLocalUser = () => {
   const getLocalSavedUser = window.localStorage.getItem("social-app-user");
   if (getLocalSavedUser) {
@@ -33,6 +36,7 @@ export const getLocalUser = () => {
     return {};
   }
 };
+
 export const saveLocalUser = (userObj) => {
   const saveUser = window.localStorage.setItem(
     "social-app-user",
@@ -40,6 +44,7 @@ export const saveLocalUser = (userObj) => {
   );
   console.log(saveUser);
 };
+
 export const removeSavedUser = () => {
   window.localStorage.removeItem("social-app-user");
 };
